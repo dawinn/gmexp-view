@@ -16,10 +16,10 @@
     </div>
     <div class="header__search  search">
       <form class="search__form">
+        <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
         <label class="search__label" for="searchID">
           Поиск
         </label>
-        <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
       </form>
     </div>
     <nav class="header__menu  menu menu--closed  ">
@@ -139,82 +139,84 @@
     </section>
 
     <section class="projects">
-      <h2 class="projects__title">Реализованные проекты</h2>
-      <p class="projects__subtitle">За это время было спроектировано и внедрено в производство большое количество обогатительного оборудования и комплексных проектов под ключ и разработаны новые технологии обогащения минералов. Ниже приведены примеры работ.</p>
-      <div class="projects__filter">
-        <input type="radio" name="filterProjects" checked="checked" id='filterProjects1'><label for='filterProjects1'>Все проекты</label>
-        <input type="radio" name="filterProjects" id='filterProjects2'><label for='filterProjects2'>Введение технологий</label>
-        <input type="radio" name="filterProjects" id='filterProjects3'><label for='filterProjects3'>Модернизация</label>
-        <input type="radio" name="filterProjects" id='filterProjects4'><label for='filterProjects4'>Обогащение</label>
-        <input type="radio" name="filterProjects" id='filterProjects5'><label for='filterProjects5'>Тех.аудит</label>
+      <div class="projects__wrapper">
+        <h2 class="projects__title">Реализованные проекты</h2>
+        <p class="projects__subtitle">За это время было спроектировано и внедрено в производство большое количество обогатительного оборудования и комплексных проектов под ключ и разработаны новые технологии обогащения минералов. Ниже приведены примеры работ.</p>
+        <div class="projects__filter">
+          <input type="radio" name="filterProjects" checked="checked" id='filterProjects1'><label for='filterProjects1'>Все проекты</label>
+          <input type="radio" name="filterProjects" id='filterProjects2'><label for='filterProjects2'>Введение технологий</label>
+          <input type="radio" name="filterProjects" id='filterProjects3'><label for='filterProjects3'>Модернизация</label>
+          <input type="radio" name="filterProjects" id='filterProjects4'><label for='filterProjects4'>Обогащение</label>
+          <input type="radio" name="filterProjects" id='filterProjects5'><label for='filterProjects5'>Тех.аудит</label>
+        </div>
+        <div class="projects__list">
+          <section class="project">
+            <div class="project__img-wrap">
+                <img src="./img/project-1.jpg" class="project__img" width="351" height="226">
+            </div>
+            <div class="project__caption">
+              <h3 class="project__title">"Кольская ГМК"</h3>
+              <p>Модернизация схемы сгущения</p>
+            </div>
+          </section>
+          <section class="project">
+            <div class="project__img-wrap">
+                <img src="./img/project-2.jpg" class="project__img" width="350" height="225">
+            </div>
+            <div class="project__caption">
+              <h3 class="project__title">
+                "Рудметалл АД"
+              </h3>
+              <p>Модернизация схемы сгущения</p>
+            </div>
+          </section>
+          <section class="project">
+            <div class="project__img-wrap">
+              <img src="./img/project-3.jpg" class="project__img" width="350" height="225">
+            </div>
+            <div class="project__caption">
+              <h3 class="project__title">
+                ОАО "Шахта Полосухинская"
+              </h3>
+              <p>Модернизация схемы сгущения3</p>
+            </div>
+          </section>
+          <section class="project">
+            <div class="project__img-wrap">
+              <img src="./img/project-4.jpg" class="project__img" width="350" height="225">
+            </div>
+            <div class="project__caption">
+              <h3 class="project__title">
+                ТОО «Ульба-ФторКомплекс»
+              </h3>
+              <p>разработка технологического регламента </p>
+            </div>
+          </section>
+          <section class="project">
+            <div class="project__img-wrap">
+              <img src="./img/project-5.jpg" class="project__img" width="350" height="225">
+            </div>
+            <div class="project__caption">
+              <h3 class="project__title">
+                "Кольская ГМК"
+              </h3>
+              <p>Модернизация схемы сгущения</p>
+            </div>
+          </section>
+          <section class="project">
+            <div class="project__img-wrap">
+              <img src="./img/project-6.jpg" class="project__img" width="350" height="225">
+            </div>
+            <div class="project__caption">
+              <h3 class="project__title">
+                "Кольская ГМК"
+              </h3>
+              <p>Модернизация схемы сгущения</p>
+            </div>
+          </section>
+        </div>
+        <a href="" class="projects__all link">Ещё проекты</a>
       </div>
-      <div class="projects__list">
-        <section class="project">
-          <div class="project__img-wrap">
-              <img src="./img/project-1.jpg" class="project__img" width="351" height="226">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">"Кольская ГМК"</h3>
-            <p>Модернизация схемы сгущения</p>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__img-wrap">
-              <img src="./img/project-2.jpg" class="project__img" width="350" height="225">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">
-              "Рудметалл АД"
-            </h3>
-            <p>Модернизация схемы сгущения</p>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__img-wrap">
-            <img src="./img/project-3.jpg" class="project__img" width="350" height="225">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">
-              ОАО "Шахта Полосухинская"
-            </h3>
-            <p>Модернизация схемы сгущения3</p>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__img-wrap">
-            <img src="./img/project-4.jpg" class="project__img" width="350" height="225">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">
-              ТОО «Ульба-ФторКомплекс»
-            </h3>
-            <p>разработка технологического регламента </p>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__img-wrap">
-            <img src="./img/project-5.jpg" class="project__img" width="350" height="225">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">
-              "Кольская ГМК"
-            </h3>
-            <p>Модернизация схемы сгущения</p>
-          </div>
-        </section>
-        <section class="project">
-          <div class="project__img-wrap">
-            <img src="./img/project-6.jpg" class="project__img" width="350" height="225">
-          </div>
-          <div class="project__caption">
-            <h3 class="project__title">
-              "Кольская ГМК"
-            </h3>
-            <p>Модернизация схемы сгущения</p>
-          </div>
-        </section>
-      </div>
-      <a href="" class="projects__all link">Ещё проекты</a>
     </section>
   </main>
   <footer class="footer">
