@@ -1,9 +1,13 @@
+'use strict';
 
+(function () {
 
-var navMain = document.querySelector('.menu');
-var navToggle = document.querySelector('.menu__toggle');
+const navMain = document.querySelector('.menu');
+const navToggle = document.querySelector('.menu__toggle');
 
-navMain.classList.remove('menu--nojs');
+if (navMain) {
+  navMain.classList.remove('menu--nojs');
+}
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('menu--closed')) {
@@ -15,3 +19,26 @@ navToggle.addEventListener('click', function() {
   }
 });
 
+
+const eqiupMenu = document.querySelector('.equipments');
+const eqiupToggle = document.querySelector('.equipments__toggle');
+
+if (eqiupMenu) {
+  eqiupMenu.classList.remove('equipments--nojs');
+
+  eqiupMenu.addEventListener('click', function() {
+    if (eqiupMenu.classList.contains('equipments--closed')) {
+      eqiupMenu.classList.remove('equipments--closed');
+      eqiupMenu.classList.add('equipments--opened');
+    } else {
+      eqiupMenu.classList.add('equipments--closed');
+      eqiupMenu.classList.remove('equipments--opened');
+    }
+  });
+}
+
+
+
+
+
+})();
