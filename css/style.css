@@ -1954,6 +1954,44 @@ img {
   .equipments--opened .equipments__toggle::after {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg); }
+  .equipments--var2 .equipments__toggle {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 3px;
+    top: 10px; }
+    .equipments--var2 .equipments__toggle::after {
+      content: none; }
+  .equipments--var2.equipments--closed .equipments__wrapper {
+    width: 100%;
+    margin-left: 0;
+    height: 20px;
+    height: 40px;
+    margin-top: -100%;
+    top: 0; }
+  .equipments--var2.equipments--opened .equipments__wrapper {
+    position: fixed;
+    height: calc(100vh - 49px);
+    top: 50px;
+    margin-top: 0;
+    -webkit-transition: top,  height, margin, 1s ease-in-out 0.1s;
+    transition: top,  height, margin, 1s ease-in-out 0.1s; }
+  .equipments--var2.equipments--opened .equipments__toggle {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    top: 60px;
+    right: 10px;
+    z-index: 20;
+    background-color: #ac1212;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 0; }
+    .equipments--var2.equipments--opened .equipments__toggle::after {
+      content: ''; }
   .equipments__type label::before {
     border-top: 1px solid #fff;
     border-right: 1px solid #fff; }
