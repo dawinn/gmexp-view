@@ -434,7 +434,8 @@ img {
   text-transform: uppercase;
   letter-spacing: 2px; }
   .content__title.content__title--index {
-    font-size: 0; }
+    font-size: 0;
+    margin-bottom: 10px; }
 
 .content__news {
   background-color: #e6e6e6; }
@@ -1422,8 +1423,9 @@ img {
     background-color: #fff; }
     .about.about--aside {
       padding: 0;
-      padding-top: 100px;
+      padding-top: 90px;
       margin: 0;
+      margin-top: 10px;
       width: auto;
       max-width: 50%; }
   .about__item {
@@ -1766,7 +1768,7 @@ img {
     margin-bottom: 94px;
     padding-top: 100px; }
     .about.about--aside {
-      padding-top: 150px; }
+      padding-top: 140px; }
   .about__title,
   .about__subtitle {
     position: initial;
