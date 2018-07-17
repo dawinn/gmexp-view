@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta name="theme-color" content="#ac1212">
   <title>Гормашэкспорт - Проекты - Шахта полосухинская</title>
   <link rel="icon" type="image/ico" href="favicon.ico">
   <link href="css/style.css" rel="stylesheet">
@@ -29,7 +30,7 @@
       <div class="menu__wrapper">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="about.html" class="current">О предприятии</a>
+            <a href="about.html" >О предприятии</a>
           </li>
           <li class="menu__item">
             <a href="engineering.html">Инжиниринг и технологии</a>
@@ -38,7 +39,7 @@
             <a href="equipment-1.html">Оборудование</a>
           </li>
           <li class="menu__item">
-            <a href="projects.html">Проекты</a>
+            <a href="projects.html" class="current">Проекты</a>
           </li>
         </ul>
         <ul class="menu__list menu__list--additional">
@@ -63,7 +64,58 @@
   </header>
   <main class="content">
     <h1 class="content__title" style="background-image: url(./img/bg-projects.jpg)">Проекты</h1>
-   <div class="content__wrapper">
+    <div class="gallery  gallery--feed">
+      <div class="gallery__wrapper">
+        <div class="gallery__list">
+          <div class="gallery__before"></div>
+          <section class="gallery__item">
+            <a href="project.html">
+            <div class="gallery__img-wrap">
+              <img src="./img/project-1.jpg" class="gallery__img" width="210" height="170">
+            </div>
+            <div class="gallery__caption">
+              <h3 >"Кольская ГМК"</h3>
+            </div>
+          </a>
+          </section>
+          <section class="gallery__item">
+            <div class="gallery__img-wrap">
+                <img src="./img/project-2.jpg" class="gallery__img"  width="210" height="170">
+            </div>
+            <div class="gallery__caption">
+              <h3>"Рудметалл АД"</h3>
+            </div>
+          </section>
+          <section class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="./img/Nadezhda.jpg" class="gallery__img"  width="210" height="170">
+            </div>
+            <div class="gallery__caption">
+              <h3>ОАО "Шахта Полосухинская"</h3>
+            </div>
+          </section>
+          <section class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="./img/project-4.jpg" class="gallery__img" width="210" height="170">
+            </div>
+            <div class="gallery__caption">
+              <h3>ТОО «Ульба-ФторКомплекс»</h3>
+            </div>
+          </section>
+          <section class="gallery__item">
+            <div class="gallery__img-wrap">
+              <img src="./img/project-5.jpg" class="gallery__img"  width="210" height="170">
+            </div>
+              <div class="gallery__caption">
+                <h3>"Кольская ГМК"</h3>
+              </div>
+          </section>
+          <div class="gallery__after"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="content__wrapper">
       <article class="article">
         <nav class="breadcrumbs">
           <a href="index.html">Главная страница</a>
@@ -85,6 +137,12 @@
           <p>Специалисты  "Гормашэкспорт" опубликовали более ста научных статей в академических, отраслевых журналах, сборниках конференций; получили 15 патентов на изобретения в РФ и за рубежом.</p>
           <p>Обладая собственной лабораторной и производственной базой, мы предоставляем: проведение исследований обогатимости, разработку проектов и технологических регламентов, проектирование, производство и поставку обогатительного оборудования, шеф-монтаж, пусконаладочные работы, обучение персонала, гарантийное и послегарантийное обслуживание.</p>
           <p>"Гормашэкспорт" - инновационная перспективная компания с обширным портфелем продукции - от классических машин до новейших технологий обогащения.</p>
+        </div>
+
+        <div class="article__pagination">
+          <a class="link" href="">Предыдущий проект</a>
+          <a class="link  link--invers" href="./projects.html" >Все проекты</a>
+          <a class="link" href=''>Следующий проект</a>
         </div>
       </article>
    </div>
