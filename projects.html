@@ -10,61 +10,64 @@
 </head>
 <body class="page">
   <header class="header">
-    <div class="header__logo" href="index.html">
-      <a href='index.html'>
-          <picture>
-          <img src="./img/logo.svg" width="151" height="12" alt="Гормашэкспорт">
-        </picture>
-      </a>
-    </div>
-    <div class="header__search  search">
-      <form class="search__form">
-        <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
-        <label class="search__label" for="searchID">
-          Поиск
-        </label>
-      </form>
-    </div>
-    <nav class="header__menu  menu menu--closed  ">
-      <button class="menu__toggle" type="button">Открыть меню</button>
-      <div class="menu__wrapper">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="about.html">О предприятии</a>
-          </li>
-          <li class="menu__item">
-            <a href="engineering.html">Инжиниринг и технологии</a>
-          </li>
-          <li class="menu__item">
-            <a href="equipment-1.html">Оборудование</a>
-          </li>
-          <li class="menu__item">
-            <a href="projects.html" class="current">Проекты</a>
-          </li>
-        </ul>
-        <ul class="menu__list menu__list--additional">
-          <li class="menu__item">
-            <a href="news.html">Новости</a>
-          </li>
-          <li class="menu__item">
-            <a href="" >Вакансии</a>
-          </li>
-          <li class="menu__item">
-            <a href="" >Публикации</a>
-          </li>
-          <li class="menu__item">
-            <a href="contacts.html" >Контакты</a>
-          </li>
-          <li class="menu__item  menu__item--ruen">
-            <a class="current" href="">ru</a><a href="">en</a>
-          </li>
-        </ul>
+    <div class="header__wrapper">
+      <div class="header__logo" href="index.html">
+        <a href='index.html'>
+            <picture>
+            <img src="./img/logo.svg" width="151" height="12" alt="Гормашэкспорт">
+          </picture>
+        </a>
       </div>
-    </nav>
+      <div class="header__search  search">
+        <form class="search__form">
+          <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
+          <label class="search__label" for="searchID">
+            Поиск
+          </label>
+        </form>
+      </div>
+      <nav class="header__menu  menu menu--closed  ">
+        <button class="menu__toggle" type="button">Открыть меню</button>
+        <div class="menu__wrapper">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="about.html">О предприятии</a>
+            </li>
+            <li class="menu__item">
+              <a href="engineering.html">Инжиниринг и технологии</a>
+            </li>
+            <li class="menu__item">
+              <a href="equipment-1.html">Оборудование</a>
+            </li>
+            <li class="menu__item">
+              <a href="projects.html" class="current">Проекты</a>
+            </li>
+          </ul>
+          <ul class="menu__list menu__list--additional">
+            <li class="menu__item">
+              <a href="news.html">Новости</a>
+            </li>
+            <li class="menu__item">
+              <a href="" >Вакансии</a>
+            </li>
+            <li class="menu__item">
+              <a href="" >Публикации</a>
+            </li>
+            <li class="menu__item">
+              <a href="contacts.html" >Контакты</a>
+            </li>
+            <li class="menu__item  menu__item--ruen">
+              <a class="current" href="">ru</a><a href="">en</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="content">
-    <h1 class="content__title" style="background-image: url(./img/bg-projects.jpg)">Проекты</h1>
-
+    <div class="content__title-wrapper"  style="background-image: url(./img/bg-projects.jpg)">
+      <h1 class="content__title" >Проекты</h1>
+    </div>
     <section class="gallery">
       <div class="gallery__wrapper">
         <nav class="breadcrumbs">
@@ -73,20 +76,22 @@
         </nav>
         <div class="gallery__list">
           <section class="gallery__item">
-            <div class="gallery__img-wrap">
-              <a href="project.html">
-                <img src="./img/project-1.jpg" class="gallery__img" width="351" height="226">
-              </a>
-            </div>
-            <div>
-              <h3 class="gallery__caption">"Кольская ГМК"</h3>
-              <p>Модернизация схемы сгущения</p>
-            </div>
+            <a href="project.html">
+              <div class="gallery__img-wrap">
+                  <img src="./img/project-1.jpg" class="gallery__img" width="351" height="226">
+              </div>
+              <div class="gallery__caption">
+                <h3 >"Кольская ГМК"</h3>
+                <p>Модернизация схемы сгущения</p>
+              </div>
+            </a>
           </section>
           <section class="gallery__item">
-            <div class="gallery__img-wrap">
-                <img src="./img/project-2.jpg" class="gallery__img" width="350" height="225">
-            </div>
+            <a href="project.html">
+              <div class="gallery__img-wrap">
+                  <img src="./img/project-2.jpg" class="gallery__img" width="350" height="225">
+              </div>
+            </a>
             <div>
               <h3 class="gallery__caption">
                 "Рудметалл АД"
@@ -184,6 +189,7 @@
         <p><span class="footer__address-label">Телефон&nbsp;:&nbsp;</span>+7 (383) 360-09-26</p>
         <p><span class="footer__address-label">Email&nbsp;:&nbsp;</span>goraexport@mail.ru</p>
       </section>
+
       <nav class="footer__menu  menu  menu--footer">
         <ul class="menu__list">
           <li class="menu__item">
@@ -226,7 +232,6 @@
           <li class="menu__item  menu__item--google">
             <a href="">g+</a>
           </li>
-
         </ul>
       </nav>
       <div class="footer__logo">

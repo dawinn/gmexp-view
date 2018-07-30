@@ -10,62 +10,66 @@
 </head>
 <body class="page">
   <header class="header">
-    <div class="header__logo" href="index.html">
-      <a href='index.html'>
-          <picture>
-          <img src="./img/logo.svg" width="151" height="12" alt="Гормашэкспорт">
-        </picture>
-      </a>
-    </div>
-    <div class="header__search  search">
-      <form class="search__form">
-        <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
-        <label class="search__label" for="searchID">
-          Поиск
-        </label>
-      </form>
-    </div>
-    <nav class="header__menu  menu menu--closed  ">
-      <button class="menu__toggle" type="button">Открыть меню</button>
-      <div class="menu__wrapper">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="about.html" >О предприятии</a>
-          </li>
-          <li class="menu__item">
-            <a href="engineering.html" class="current">Инжиниринг и технологии</a>
-          </li>
-          <li class="menu__item">
-            <a href="equipment-1.html">Оборудование</a>
-          </li>
-          <li class="menu__item">
-            <a href="projects.html">Проекты</a>
-          </li>
-        </ul>
-        <ul class="menu__list menu__list--additional">
-          <li class="menu__item">
-            <a href="news.html" >Новости</a>
-          </li>
-          <li class="menu__item">
-            <a href="" >Вакансии</a>
-          </li>
-          <li class="menu__item">
-            <a href="" >Публикации</a>
-          </li>
-          <li class="menu__item">
-            <a href="contacts.html" >Контакты</a>
-          </li>
-          <li class="menu__item  menu__item--ruen">
-            <a class="current" href="">ru</a><a href="">en</a>
-          </li>
-        </ul>
+    <div class="header__wrapper">
+      <div class="header__logo" href="index.html">
+        <a href='index.html'>
+            <picture>
+            <img src="./img/logo.svg" width="151" height="12" alt="Гормашэкспорт">
+          </picture>
+        </a>
       </div>
-    </nav>
+      <div class="header__search  search">
+        <form class="search__form">
+          <input class="search__line" type="text" name="searchLine" id="searchID" placeholder="Поиск по сайту">
+          <label class="search__label" for="searchID">
+            Поиск
+          </label>
+        </form>
+      </div>
+      <nav class="header__menu  menu menu--closed  ">
+        <button class="menu__toggle" type="button">Открыть меню</button>
+        <div class="menu__wrapper">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="about.html" >О предприятии</a>
+            </li>
+            <li class="menu__item">
+              <a href="engineering.html" class="current">Инжиниринг и технологии</a>
+            </li>
+            <li class="menu__item">
+              <a href="equipment-1.html">Оборудование</a>
+            </li>
+            <li class="menu__item">
+              <a href="projects.html">Проекты</a>
+            </li>
+          </ul>
+          <ul class="menu__list menu__list--additional">
+            <li class="menu__item">
+              <a href="news.html" >Новости</a>
+            </li>
+            <li class="menu__item">
+              <a href="" >Вакансии</a>
+            </li>
+            <li class="menu__item">
+              <a href="" >Публикации</a>
+            </li>
+            <li class="menu__item">
+              <a href="contacts.html" >Контакты</a>
+            </li>
+            <li class="menu__item  menu__item--ruen">
+              <a class="current" href="">ru</a><a href="">en</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="content">
-    <h1 class="content__title" style="background-image: url(./img/bg-engineering.jpg)">Инжиниринг и технологии</h1>
+    <div class="content__title-wrapper" style="background-image: url(./img/bg-engineering.jpg)">
+      <h1 class="content__title" >Инжиниринг и технологии</h1>
+    </div>
     <div class="content__wrapper">
-      <article class="article">
+      <article class="article  article--aside">
         <nav class="breadcrumbs">
           <a href="index.html">Главная страница</a>
           <a >Инжиниринг</a>
@@ -151,28 +155,28 @@
           <li class="about__item">
             <a href=''>
               <h3 class="about__item-caption">Рудоподготовка</h3>
-              <p>Cовокупность процессов обработки руды разнообразными методами для получения вещественного состава.</p>
+              <p class="about__item-details">Cовокупность процессов обработки руды разнообразными методами для получения вещественного состава.</p>
             </a>
           </li>
           <li class="about__item">
             <h3 class="about__item-caption">Обогащение руд</h3>
-            <p>Совокупность методов разделения металлов и минералов друг от друга по разнице их физ. или хим.свойств.</p>
+            <p class="about__item-details">Совокупность методов разделения металлов и минералов друг от друга по разнице их физ. или хим.свойств.</p>
           </li>
           <li class="about__item">
             <h3 class="about__item-caption">Обогащение угля</h3>
-            <p>Отделение углеродистых составляющих от пустой породы, не содержащих углерода. </p>
+            <p class="about__item-details">Отделение углеродистых составляющих от пустой породы, не содержащих углерода. </p>
           </li>
           <li class="about__item">
             <h3 class="about__item-caption">Сухое обогащение</h3>
-            <p>Сухое обогащение применяется для сухой классификации полидисперсных материалов.</p>
+            <p class="about__item-details">Сухое обогащение применяется для сухой классификации полидисперсных материалов.</p>
           </li>
           <li class="about__item">
             <h3 class="about__item-caption">Обогащение песка</h3>
-            <p>Обогащение песка состоит в удалении камней крупнее 5 мм, отмывке глинистой и иловой фракции, улучшении зернового состава.</p>
+            <p class="about__item-details">Обогащение песка состоит в удалении камней крупнее 5 мм, отмывке глинистой и иловой фракции, улучшении зернового состава.</p>
           </li>
           <li class="about__item">
             <h3 class="about__item-caption">Переработка мусора</h3>
-            <p>Переработка отходов с целью обеспечения повторного использования полученного сырья, энергии, изделий и материалов. </p>
+            <p class="about__item-details">Переработка отходов с целью обеспечения повторного использования полученного сырья, энергии, изделий и материалов. </p>
           </li>
         </ul>
       </aside>
