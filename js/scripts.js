@@ -28,13 +28,11 @@
   btnUp.setAttribute(`href`,anchorTop.getAttribute(`id`));
 
   const parentElem = document.querySelector('.content');
-
-
   window.onscroll = function() {
     let pageY =
                 window.pageYOffset
                 || document.documentElement.scrollTop;
-    let innerHeight = document.documentElement.clientHeight;
+    let innerHeight = document.documentElement.clientHeight / 2;
 
     parentElem.insertBefore(btnUp, parentElem.firstElementChild);
     parentElem.insertBefore(anchorTop, parentElem.btnUp);
@@ -43,8 +41,31 @@
   }
 
 
-  const eqiupMenu = document.querySelector('.equipments');
+  const isVisible = function (target) {
+    // Все позиции элемента
+    const targetPos = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+        left: window.pageXOffset + target.getBoundingClientRect().left,
+        right: window.pageXOffset + target.getBoundingClientRect().right,
+        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+      };
+    // Получаем позиции окна
+    const windowPos = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+      };
 
+    return (targetPos.bottom > windowPos.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+        targetPos.top < windowPos.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+        targetPos.right > windowPos.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+        targetPos.left < windowPos.right);  // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+      // Если элемент полностью видно, то запускаем следующий код
+
+  };
+
+  const eqiupMenu = document.querySelector('.equipments');
   const switchEquipMenu =  function(menu, on = false) {
     menu.classList.toggle('equipments--closed', !on);
     menu.classList.toggle('equipments--opened', on);
@@ -58,60 +79,23 @@
       switchEquipMenu(eqiupMenu, eqiupMenu.classList.contains('equipments--closed'));
     });
 
-    if (1) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       const touchsurface = document.createElement('div');
       touchsurface.classList.add(`equipments__touchsurface`);
+      touchsurface.classList.add(`link`);
+      touchsurface.innerHTML = `Каталог`;
       eqiupMenu.insertBefore(touchsurface, eqiupMenu.firstElementChild);
 
-      const notice = document.createElement('div');
-      notice.classList.add(`notice`);
-      notice.innerHTML = `<p>Смахните вправо, чтобы открыть каталог.</p><button class='link  notice__link-close'>OK</button>`;
-      eqiupMenu.insertBefore(notice, eqiupMenu.firstElementChild);
+      touchsurface.addEventListener('click', function() {
+        switchEquipMenu(eqiupMenu, eqiupMenu.classList.contains('equipments--closed'));
+      });
 
-      notice.querySelector(`.notice__link-close`).addEventListener(`click`, function(e) {
-        e.preventDefault();
-        notice.parentNode.removeChild(notice);
-      })
-      //
-      window.addEventListener('load', function(){
-        // const touchsurface = document.querySelector('body');
-        let startX = 0;
-        let startY = 0;
-        let dist = 0;
-        const threshold = 60; // минимальное расстояние для swipe
-        const allowedTime = 200; // максимальное время прохождения установленного расстояния
-        let elapsedTime = 0;
-        let startTime = 0;
+      touchsurface.classList.toggle(`link--show`, !isVisible(eqiupToggle));
 
-        function handleswipe(isRightSwipe){
-            switchEquipMenu(eqiupMenu, isRightSwipe);
-        }
-
-        touchsurface.addEventListener('touchstart', function(e){
-            touchsurface.innerHTML = ''
-            var touchobj = e.changedTouches[0]
-            dist = 0
-            startX = touchobj.pageX
-            startY = touchobj.pageY
-            startTime = new Date().getTime() // время контакта с поверхностью сенсора
-            e.preventDefault()
-        }, false)
-
-        touchsurface.addEventListener('touchmove', function(e){
-            e.preventDefault() // отключаем стандартную реакцию скроллинга
-        }, false)
-
-        touchsurface.addEventListener('touchend', function(e){
-            var touchobj = e.changedTouches[0]
-            dist = touchobj.pageX - startX // получаем пройденную дистанцию
-            elapsedTime = new Date().getTime() - startTime // узнаем пройденное время
-            // проверяем затраченное время,горизонтальное перемещение >= threshold, и вертикальное перемещение <= 100
-            var swiperightBol = (elapsedTime <= allowedTime && dist >= threshold && Math.abs(touchobj.pageY - startY) <= 100)
-            handleswipe(swiperightBol)
-            e.preventDefault()
-        }, false)
-
-      }, false)
+      // Запускаем функцию при прокрутке страницы
+      window.addEventListener('scroll', function() {
+        touchsurface.classList.toggle(`link--show`, !isVisible(eqiupToggle));
+      });
 
     }
 
